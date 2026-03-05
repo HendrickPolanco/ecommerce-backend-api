@@ -37,6 +37,7 @@ model Product {
    categoryID Int
    category Categories @relation(fields: [categoryID], references: [id])
   orderItem OrderItems[]
+  categories Categories
 }
 
 model OrderItems {
