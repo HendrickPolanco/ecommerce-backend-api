@@ -1,0 +1,53 @@
+curl -X POST http://localhost:4005/ecommerce \
+  -H "Content-Type: application/json" \
+  -d '{"name": "samsung", "price": 1200, "categoryID": 1, "userID": 2}'
+
+  curl -X POST http://localhost:4005/ecommerce/user \
+  -H "Content-Type: application/json" \
+  -d '{"name": "hendrick", "lastname": "polanco", "email": "hendrick@gmail.com"}'
+
+
+   curl -X POST http://localhost:4005/ecommerce/category \
+  -H "Content-Type: application/json" \
+  -d '{"name": "living room"}'
+
+    curl -X POST http://localhost:4005/ecommerce/addOrderItem \
+  -H "Content-Type: application/json" \
+  -d '{"date":"03/03/2026", "userID":2,"status":"pending","quantity":1,"productID":1}'
+
+   status,
+              userID,
+              orderItems:{
+                create:{
+                    statusItemOrder,
+                    quantity,
+                    productID,
+
+
+curl -X POST http://localhost:4005/ecommerce/addOrderItem \
+  -H "Content-Type: application/json" \
+  -d '{
+    "userID": 2,
+    "quantity": 1,
+    "status": "pending",
+    "productID": 1,
+  }'
+
+  curl -X POST http://localhost:4005/ecommerce/addOrderItem \
+  -H "Content-Type: application/json" \
+  -d '{
+    "userID": 2,
+    "status": "pending",
+    "quantity": 1,
+    "productID": 1
+  }'
+
+
+  curl -X GET http://localhost:4006/ecommerce/userorder/2 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "userID": 2,
+    "status": "pending",
+    "quantity": 1,
+    "productID": 1
+  }'
