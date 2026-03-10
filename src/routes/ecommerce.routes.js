@@ -5,6 +5,8 @@ const { addCategory } = require("../controllers/post/addCategories")
 const { addOrderItem } = require("../controllers/post/AddOrderItem")
 const { getUserAndOrders } = require("../controllers/get/getUserAndOrders")
 const { getProductWithCategory } = require("../controllers/get/getProductWithCategory")
+const { getCategory } = require("../controllers/get/getCategory")
+const { getAllProductWithSameCategory } = require("../controllers/get/getAllProductWithSameCategory")
 
 
 const routerEcommerce = express.Router()
@@ -19,6 +21,9 @@ routerEcommerce.post("/addOrderItem", addOrderItem)
 
 routerEcommerce.get("/userorder/:id", getUserAndOrders)
 routerEcommerce.get("/product/:id", getProductWithCategory)
+routerEcommerce.get("/category/:id", getCategory)
+routerEcommerce.get("/products", getAllProductWithSameCategory)
+
 
 
 module.exports = routerEcommerce
